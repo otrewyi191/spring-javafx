@@ -30,6 +30,5 @@ public class Dir {
         File dir = new File(dirName);
         File[] files = dir.listFiles();
         Arrays.stream(files).map(f->f.toString()).forEach(System.out::println);
-
     }
 }

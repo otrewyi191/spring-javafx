@@ -1,15 +1,13 @@
 package sample.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.*;
 import sample.hwm.AddServer;
 
 /**
  * Created by Administrator on 2017/5/12 0012.
  */
 @Configuration
+@EnableAspectJAutoProxy
 @ComponentScan(basePackages = "sample")
 public class Config {
 
