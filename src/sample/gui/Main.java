@@ -10,9 +10,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import sample.config.Config;
 
-@Configuration
-@ComponentScan({"sample"})
+//@Configuration
+//@ComponentScan({"sample"})
 @PropertySource(value = "classpath:properties/config.properties")
 public class Main extends Application {
 
@@ -21,7 +22,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        applicationContext = new AnnotationConfigApplicationContext(Main.class);
+        applicationContext = new AnnotationConfigApplicationContext(Config.class);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../sample.fxml"));
 
         fxmlLoader.setControllerFactory(applicationContext::getBean);

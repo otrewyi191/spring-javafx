@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 /**
  * Created by Administrator on 2017/5/12 0012.
  */
-@ActiveProfiles(value = "sep")
+@ActiveProfiles(value = "netprobe")
 public class netprobeTest extends TestBase{
 
     @Autowired
