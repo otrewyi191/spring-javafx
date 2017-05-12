@@ -8,7 +8,8 @@ import sample.hwm.AddServer;
 public class netprobe implements AddServer {
 
     @Override
-    public void add(String IP) {
+    public String add(String IP) {
         System.out.println("netprobe added");
+        return "netprobe added";
     }
 }

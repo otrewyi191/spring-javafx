@@ -8,7 +8,8 @@ import sample.hwm.AddServer;
 public class sep implements AddServer {
 
     @Override
-    public void add(String IP) {
+    public String add(String IP) {
         System.out.println("sep added");
+        return "sep added";
     }
 }
