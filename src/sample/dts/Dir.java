@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Administrator on 2017/5/12 0012.
@@ -21,11 +22,13 @@ public class Dir {
     @Value("${ips}")
     private String[] ips;
 
+    @Value("#{'${ips}'.split(',')}")
+    private List<String> ipList;
+
 
     public void listDir() {
         File dir = new File(dirName);
         File[] files = dir.listFiles();
-
         Arrays.stream(files).map(f->f.toString()).forEach(System.out::println);
 
     }
