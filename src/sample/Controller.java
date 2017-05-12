@@ -16,7 +16,6 @@ public class Controller {
     private myBean bean;
 
     public void setTextField(MouseEvent mouseEvent) {
-        topTextField.setText("test");
-        System.out.println(bean.getText());
+        topTextField.setText(bean.getText());
     }
 }

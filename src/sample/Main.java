@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 
 @Configuration
 @ComponentScan({"sample"})
-@Component
 public class Main extends Application {
 
     private ApplicationContext applicationContext;
@@ -28,10 +27,8 @@ public class Main extends Application {
 
         parent = fxmlLoader.load();
 
-        //Object controller = fxmlLoader.getController();
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(parent));
-        //primaryStage.setScene(new Scene(parent, 300, 275));
         primaryStage.show();
     }
 
