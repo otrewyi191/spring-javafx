@@ -11,17 +11,10 @@ import sample.hwm.servertype.sep;
  */
 @Configuration
 @ComponentScan(value = "sample")
-public class Config {
-
-    //Contitional注解只能用在Config里面，profile可以用在Component
-    @Bean(name="addServer")
-    @Conditional(netprobe.class)
-    public AddServer netprobe(){
-        return new sample.hwm.add.netprobe();
-    }
+@Profile("sep")
+public class SepConfig {
 
     @Bean(name="addServer")
-    @Conditional(sep.class)
     public AddServer sep(){
         return new sample.hwm.add.sep();
     }

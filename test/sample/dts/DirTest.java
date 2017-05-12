@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mock.web.MockServletContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import sample.config.SepConfig;
+import sample.gui.Main;
 
 import static org.junit.Assert.*;
 
@@ -13,7 +15,7 @@ import static org.junit.Assert.*;
  * Created by Administrator on 2017/5/12 0012.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = MockServletContext.class)
+@ContextConfiguration(classes = Main.class)
 public class DirTest {
     @Autowired
     Dir dir;
