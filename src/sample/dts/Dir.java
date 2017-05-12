@@ -17,6 +17,11 @@ public class Dir {
     @Value("${dts.filepath:E:\\}")
     private String dirName;
 
+
+    @Value("${ips}")
+    private String[] ips;
+
+
     public void listDir() {
         File dir = new File(dirName);
         File[] files = dir.listFiles();

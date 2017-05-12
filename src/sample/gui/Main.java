@@ -1,4 +1,4 @@
-package sample;
+package sample.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,7 +22,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         applicationContext = new AnnotationConfigApplicationContext(Main.class);
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sample.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../sample.fxml"));
 
         fxmlLoader.setControllerFactory(applicationContext::getBean);
 
