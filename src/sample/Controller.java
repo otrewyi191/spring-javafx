@@ -10,13 +10,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class Controller {
     @FXML
-    private TextField top123;
+    private TextField topTextField;
 
     @Autowired
     private myBean bean;
 
     public void setTextField(MouseEvent mouseEvent) {
-        top123.setText("test");
+        topTextField.setText("test");
         System.out.println(bean.getText());
     }
 }

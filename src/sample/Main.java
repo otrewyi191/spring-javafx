@@ -28,7 +28,7 @@ public class Main extends Application {
 
         parent = fxmlLoader.load();
 
-        Object controller = fxmlLoader.getController();
+        //Object controller = fxmlLoader.getController();
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(parent));
         //primaryStage.setScene(new Scene(parent, 300, 275));
