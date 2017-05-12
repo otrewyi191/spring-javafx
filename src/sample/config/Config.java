@@ -11,11 +11,17 @@ import sample.hwm.servertype.sep;
  */
 @Configuration
 @ComponentScan(value = "sample")
-@Profile("sep")
-public class SepConfig {
+public class Config {
 
     @Bean(name="addServer")
+    @Conditional(value = sep.class)
     public AddServer sep(){
         return new sample.hwm.add.sep();
+    }
+
+    @Bean(name="addServer")
+    @Conditional(value = netprobe.class)
+    public AddServer netprobe(){
+        return new sample.hwm.add.netprobe();
     }
 }
