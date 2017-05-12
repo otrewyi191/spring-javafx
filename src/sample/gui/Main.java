@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import sample.config.Config;
 
-@PropertySource(value = "classpath:properties/config.properties")
 public class Main extends Application {
 
     private ApplicationContext applicationContext;

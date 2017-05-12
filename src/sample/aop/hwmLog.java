@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
-public class log {
+public class hwmLog {
 
     @Pointcut("execution(* sample.hwm.*.*(..))")
     public void controller() {

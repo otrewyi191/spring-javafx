@@ -18,17 +18,17 @@ public class DirTest extends TestBase{
     @Autowired
     Dir dir;
 
-    @Value("#{'${ips}'.split(',')}")
-    List<String> ipList;
 
     @Test
     public void test1()
     {
+        assert !dir.getBaseDir().isEmpty();
+    }
+    @Test
+    public void test2()
+    {
         dir.listDir();
     }
 
-    @Test
-    public void test2() {
-        assert !ipList.isEmpty();
-    }
+
 }

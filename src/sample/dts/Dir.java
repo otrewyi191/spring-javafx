@@ -12,23 +12,37 @@ import java.util.List;
  */
 @Component
 public class Dir {
+    public String getBaseDir() {
+        return baseDir;
+    }
 
-    //目录后面要带/
-    //配置文件里面不带引号
-    @Value("${dts.filepath:E:\\}")
-    private String dirName;
+    public void setBaseDir(String baseDir) {
+        this.baseDir = baseDir;
+    }
 
+    public String getDts() {
+        return dts;
+    }
 
-    @Value("${ips}")
-    private String[] ips;
+    public void setDts(String dts) {
+        this.dts = dts;
+    }
 
-    @Value("#{'${ips}'.split(',')}")
-    private List<String> ipList;
+    public String getDesc() {
+        return desc;
+    }
 
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    @Value("${baseDir}")
+    private String baseDir;
+
+    private String dts;
+    private String desc;
 
     public void listDir() {
-        File dir = new File(dirName);
-        File[] files = dir.listFiles();
-        Arrays.stream(files).map(f->f.toString()).forEach(System.out::println);
+        System.out.println("baseDir:[zzx]"+baseDir);
     }
 }

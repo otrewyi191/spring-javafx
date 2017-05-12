@@ -9,6 +9,7 @@ import sample.hwm.AddServer;
 @Configuration
 @EnableAspectJAutoProxy
 @ComponentScan(basePackages = "sample")
+@PropertySource(value = "classpath:properties/config.properties")
 public class Config {
 
     @Bean(name="addServer")
