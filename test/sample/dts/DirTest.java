@@ -14,6 +14,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/5/12 0012.
  */
+@ActiveProfiles("sep")
 public class DirTest extends TestBase{
     @Autowired
     Dir dir;

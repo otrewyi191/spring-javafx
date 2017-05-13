@@ -19,4 +19,8 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = Config.class)
 public class TestBase {
+
+    @Test
+    public void test()
+    {}
 }
