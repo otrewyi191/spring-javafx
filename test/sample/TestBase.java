@@ -18,6 +18,7 @@ import java.util.List;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = Config.class)
+@ActiveProfiles("sep")
 public class TestBase {
 
     @Test
