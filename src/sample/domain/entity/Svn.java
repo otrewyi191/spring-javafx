@@ -1,6 +1,7 @@
 package sample.domain.entity;
 
 import org.springframework.context.event.EventListener;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 /**
@@ -28,8 +29,10 @@ public class Svn {
     int Revision;
 
 
+    @Async
     @EventListener(condition = "#dts.dts.equals(\"zzx\")")
-    public void listner(Dts dts) {
+    public void listner(Dts dts) throws InterruptedException {
+        Thread.sleep(10000);
         System.out.println("listener zzx xxxxxxxxx");
     }
 }
