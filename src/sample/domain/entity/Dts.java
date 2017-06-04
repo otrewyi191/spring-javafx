@@ -20,10 +20,4 @@ public class Dts {
 
     private String dts;
 
-    public Dts(String dts) {
-        this.dts = dts;
-    }
-
-    public Dts() {
-    }
 }

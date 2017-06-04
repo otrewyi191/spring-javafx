@@ -28,11 +28,4 @@ public class Svn {
     String BaseUrl;
     int Revision;
 
-
-    @Async
-    @EventListener(condition = "#dts.dts.equals(\"zzx\")")
-    public void listner(Dts dts) throws InterruptedException {
-        Thread.sleep(3000);
-        System.out.println("listener zzx xxxxxxxxx");
-    }
 }

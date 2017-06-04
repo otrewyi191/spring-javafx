@@ -24,4 +24,10 @@ public class DtsServiceTest extends TestBase{
         System.out.println(dtsEntity.getDts());
     }
 
+    @Test
+    public void test02() throws Exception {
+        dtsService.setDtsNum(String.valueOf(12));
+        System.out.println(dtsEntity.getDts());
+    }
+
 }
