@@ -27,8 +27,8 @@ public class BookDaoImpl implements BookDao
     }
     public String findBookById(int id)
     {
-        //String hql="SELECT bookName from Book where id=?";
-        String hql="SELECT count(*) from Book where id=?";
+        String hql="SELECT bookName from Book where id=?";
+        //String hql="SELECT count(*) from Book where id=?";
         Query query=getSession().createQuery(hql).setInteger(0, id);
         String str= query.uniqueResult().toString();
         return str;
