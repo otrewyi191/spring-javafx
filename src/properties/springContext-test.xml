@@ -3,19 +3,24 @@
         "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
+
+
+
+<!--
     <bean id="dataSource" class="org.h2.jdbcx.JdbcConnectionPool"
           destroy-method="dispose">
         <constructor-arg>
             <bean class="org.h2.jdbcx.JdbcDataSource">
-                <!-- 内存模式 -->
+                &lt;!&ndash; 内存模式 &ndash;&gt;
                 <property name="URL" value="jdbc:h2:mem:test" />
-                <!-- 文件模式 -->
-                <!-- <property name="URL" value="jdbc:h2:testRestDB" /> -->
+                &lt;!&ndash; 文件模式 &ndash;&gt;
+                &lt;!&ndash; <property name="URL" value="jdbc:h2:testRestDB" /> &ndash;&gt;
                 <property name="user" value="sa" />
                 <property name="password" value="sa" />
             </bean>
         </constructor-arg>
     </bean>
+-->
 
 
 

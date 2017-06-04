@@ -18,7 +18,7 @@ import java.sql.SQLException;
 @EnableAspectJAutoProxy
 @ComponentScan(basePackages = "sample")
 @PropertySource(value = "classpath:properties/config.properties")
-@ImportResource("classpath:springContext-test.xml")
+//@ImportResource("classpath:springContext-test.xml")
 public class Config {
 
     @Bean
@@ -34,16 +34,6 @@ public class Config {
         return db;
     }
 
-    //@Bean
-    public DataSource getDataSourcedataSource() {
-        EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-        EmbeddedDatabase db = builder
-                .setType(EmbeddedDatabaseType.H2)
-                .addScript("db/create-db.sql")
-                .addScript("db/data-db.sql")
-                .build();
-        return db;
-    }
 
     @Bean(initMethod="start",destroyMethod="stop")
     public org.h2.tools.Server h2WebConsonleServer () throws SQLException {
