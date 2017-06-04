@@ -10,6 +10,22 @@ import java.util.regex.Pattern;
  */
 @Component
 public class Dts {
+    public String getDts() {
+        return dts;
+    }
+
+    public void setDts(String dts) {
+        this.dts = dts;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
     private String dts;
     private String desc;
 
