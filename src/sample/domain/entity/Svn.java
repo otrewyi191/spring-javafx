@@ -32,7 +32,7 @@ public class Svn {
     @Async
     @EventListener(condition = "#dts.dts.equals(\"zzx\")")
     public void listner(Dts dts) throws InterruptedException {
-        Thread.sleep(10000);
+        Thread.sleep(3000);
         System.out.println("listener zzx xxxxxxxxx");
     }
 }
