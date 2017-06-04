@@ -1,10 +1,9 @@
-package sample.dts;
+package sample.domain;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -24,6 +23,7 @@ public class Dir {
 
     @Value("${baseDir}")
     private String baseDir;
+
 
 
     public List<String> listDir() {

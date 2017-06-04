@@ -5,7 +5,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import sample.dts.Dir;
+import sample.domain.Dir;
 import sample.entity.myBean;
 import sample.hwm.AddServer;
 

@@ -1,4 +1,4 @@
-package sample.dts;
+package sample.domain;
 
 import org.springframework.stereotype.Component;
 
