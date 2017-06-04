@@ -27,7 +27,7 @@ public class Config {
         // no need shutdown, EmbeddedDatabaseFactoryBean will take care of this
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
         EmbeddedDatabase db = builder
-                .setType(EmbeddedDatabaseType.HSQL) //.H2 or .DERBY
+                .setType(EmbeddedDatabaseType.H2) //.H2 or .DERBY
                 .addScript("db/sql/create-db.sql")
                 .addScript("db/sql/insert-data.sql")
                 .build();
