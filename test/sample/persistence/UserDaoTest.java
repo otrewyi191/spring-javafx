@@ -29,7 +29,7 @@ import java.sql.ResultSet;
         @Test
         public void testFindByname() {
             NamedParameterJdbcTemplate template = new NamedParameterJdbcTemplate(db);
-            String query = template.query("select * from users;", ResultSet::toString);
+            template.query("select * from users;", ResultSet::toString);
         }
         @After
         public void tearDown() {

@@ -18,12 +18,12 @@ import java.sql.SQLException;
 @EnableAspectJAutoProxy
 @ComponentScan(basePackages = "sample")
 @PropertySource(value = "classpath:properties/config.properties")
-//@ImportResource("classpath:springContext-test.xml")
+@ImportResource("classpath:springContext-test.xml")
 public class Config {
 
-    @Bean
+    //todo datasource bean
+    //@Bean
     public DataSource dataSource() {
-
         // no need shutdown, EmbeddedDatabaseFactoryBean will take care of this
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
         EmbeddedDatabase db = builder

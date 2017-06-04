@@ -5,30 +5,39 @@
 <beans>
 
 
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" lazy-init="false">
+        <!-- 注入datasource，给sessionfactoryBean内setdatasource提供数据源 -->
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+        <!-- //加载实体类的映射文件位置及名称 -->
+        <property name="mappingLocations" value="classpath:book.hbm.xml"></property>
+    </bean>
 
-<!--
+    <!-- 配置Spring声明式事务 -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
     <bean id="dataSource" class="org.h2.jdbcx.JdbcConnectionPool"
           destroy-method="dispose">
         <constructor-arg>
             <bean class="org.h2.jdbcx.JdbcDataSource">
-                &lt;!&ndash; 内存模式 &ndash;&gt;
-                <property name="URL" value="jdbc:h2:mem:test" />
-                &lt;!&ndash; 文件模式 &ndash;&gt;
-                &lt;!&ndash; <property name="URL" value="jdbc:h2:testRestDB" /> &ndash;&gt;
-                <property name="user" value="sa" />
-                <property name="password" value="sa" />
+                <!-- 内存模式 -->
+                <!----><property name="URL" value="jdbc:h2:mem:test"/>
+                <!-- 文件模式 -->
+                <!-- <property name="URL" value="jdbc:h2:testRestDB" /> -->
+                <property name="user" value="sa"/>
+                <property name="password" value="sa"/>
             </bean>
         </constructor-arg>
     </bean>
--->
-
 
 
     <!-- 配置hibernate 相关属性 -->
-<!--    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-        &lt;!&ndash; 注入连接池 &ndash;&gt;
-        <property name="dataSource" ref="dataSource"></property>
-        &lt;!&ndash; 加载hibernate配置文件 &ndash;&gt;
-        <property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
-    </bean>-->
+    <!--    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+            &lt;!&ndash; 注入连接池 &ndash;&gt;
+            <property name="dataSource" ref="dataSource"></property>
+            &lt;!&ndash; 加载hibernate配置文件 &ndash;&gt;
+            <property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+        </bean>-->
 </beans>
