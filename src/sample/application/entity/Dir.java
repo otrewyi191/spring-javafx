@@ -1,7 +1,9 @@
 package sample.application.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import sample.domain.entity.Dts;
 
 import java.io.File;
 import java.util.Arrays;
@@ -13,6 +15,12 @@ import java.util.stream.Collectors;
  */
 @Component
 public class Dir {
+    @Value("${baseDir}")
+    private String baseDir;
+
+    @Autowired
+    private Dts dts;
+
     public String getBaseDir() {
         return baseDir;
     }
@@ -21,14 +29,4 @@ public class Dir {
         this.baseDir = baseDir;
     }
 
-    @Value("${baseDir}")
-    private String baseDir;
-
-
-
-    public List<String> listDir() {
-        File dir = new File(baseDir);
-        File[] files = dir.listFiles();
-        return Arrays.stream(files).map(File::getName).collect(Collectors.toList());
-    }
 }

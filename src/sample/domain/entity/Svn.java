@@ -1,5 +1,6 @@
 package sample.domain.entity;
 
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 /**
@@ -25,4 +26,10 @@ public class Svn {
 
     String BaseUrl;
     int Revision;
+
+
+    @EventListener
+    public void listner(Dts dts) {
+        System.out.println("listener zzx xxxxxxxxx");
+    }
 }

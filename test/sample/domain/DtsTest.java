@@ -14,8 +14,6 @@ public class DtsTest extends TestBase {
 
     @Test
     public void getDtsNumber() throws Exception {
-        String dtsNum=dts.getDtsNumber("DTS242358397");
-        System.out.println(dtsNum);
     }
 
 }

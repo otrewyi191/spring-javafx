@@ -23,7 +23,6 @@ public class DirTest extends TestBase{
     @Test
     public void test2()
     {
-        dir.listDir();
     }
 
 

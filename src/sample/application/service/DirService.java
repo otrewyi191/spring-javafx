@@ -1,4 +1,4 @@
-package sample.domain.service;
+package sample.application.service;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

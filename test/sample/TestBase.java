@@ -12,7 +12,6 @@ import sample.config.Config;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = Config.class)
-@ActiveProfiles("sep")
 public class TestBase {
 
     @Test

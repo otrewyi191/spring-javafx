@@ -6,6 +6,7 @@ import javafx.scene.input.MouseEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import sample.application.entity.Dir;
+import sample.domain.service.DtsService;
 
 
 @Component
@@ -20,11 +21,14 @@ public class Controller {
     @Autowired
     private Dir dir;
 
+    @Autowired
+    private DtsService dtsService;
+
     public void setTextField(MouseEvent mouseEvent) {
-        dir.listDir();
     }
 
     public void addServer(MouseEvent mouseEvent) {
+        dtsService.setDtsNum(String.valueOf(1234));
         rightTextField.setText("server added");
     }
 }
