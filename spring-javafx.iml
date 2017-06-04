@@ -14,6 +14,7 @@
         <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="Entities" />
+          <factory-entry name="mnf-pu-test" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/properties/META-INF/persistence.xml" />
       </configuration>
@@ -22,6 +23,7 @@
       <configuration>
         <datasource-map>
           <unit-entry name="META-INF:persistence.xml" />
+          <unit-entry name="sessionFactory" value="dataSource" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/properties/META-INF/persistence.xml" />
@@ -71,7 +73,7 @@
     <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
-    <orderEntry type="library" name="Maven: com.h2database:h2:1.3.176" level="project" />
+    <orderEntry type="library" name="Maven: com.h2database:h2:1.4.187" level="project" />
     <orderEntry type="library" name="Maven: org.apache.derby:derby:10.11.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.6.12" level="project" />
   </component>
