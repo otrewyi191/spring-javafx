@@ -28,7 +28,7 @@ public class Svn {
     int Revision;
 
 
-    @EventListener
+    @EventListener(condition = "#dts.dts.equals(\"zzx\")")
     public void listner(Dts dts) {
         System.out.println("listener zzx xxxxxxxxx");
     }

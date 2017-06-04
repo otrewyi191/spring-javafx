@@ -20,7 +20,8 @@ public class DtsService {
 
     public void setDtsNum(String dts) {
         dtsEntity.setDts(dts);
-        applicationContext.publishEvent(new Dts());
+        applicationContext.publishEvent(new Dts("1000"));
+        applicationContext.publishEvent(new Dts("zzx"));
     }
 
 

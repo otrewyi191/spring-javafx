@@ -18,16 +18,12 @@ public class Dts {
         this.dts = dts;
     }
 
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
     private String dts;
-    private String desc;
 
+    public Dts(String dts) {
+        this.dts = dts;
+    }
 
+    public Dts() {
+    }
 }
