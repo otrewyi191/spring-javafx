@@ -1,6 +1,8 @@
 package sample.application.service;
 
+import org.h2.jdbcx.JdbcConnectionPool;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -29,5 +31,8 @@ public class DirService {
         System.out.println("dir created");
         applicationEventPublisher.publishEvent(dirEntity);
     }
+
+    @Autowired
+    private JdbcConnectionPool jdbcConnectionPool;
 
 }
