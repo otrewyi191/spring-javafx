@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ActiveProfiles;
 import sample.TestBase;
-import sample.domain.entity.Dir;
+import sample.application.entity.Dir;
 
 /**
  * Created by Administrator on 2017/5/12 0012.

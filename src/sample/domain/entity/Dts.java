@@ -13,16 +13,5 @@ public class Dts {
     private String dts;
     private String desc;
 
-    public String getDtsNumber(String s) {
-        Pattern p = Pattern.compile("(DTS\\d+)");
-        Matcher m = p.matcher(s);
-        boolean b = m.matches();
-
-        if (m.find()) {
-            System.out.println(m.group());
-        }
-        //return m.group(0);
-        return s;
-    }
 
 }
