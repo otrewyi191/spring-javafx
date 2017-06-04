@@ -18,15 +18,15 @@ public class Dir {
     @Value("${baseDir}")
     private String baseDir;
 
-    @Autowired
-    private Dts dts;
-
-    public String getBaseDir() {
-        return baseDir;
+    public String getDtsDirName() {
+        return dtsDirName;
     }
 
-    public void setBaseDir(String baseDir) {
-        this.baseDir = baseDir;
+    public void setDtsDirName(String dtsDirName) {
+        this.dtsDirName = dtsDirName;
     }
+
+    private String dtsDirName;
+
 
 }
