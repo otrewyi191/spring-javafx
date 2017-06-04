@@ -1,4 +1,4 @@
-package sample.domain;
+package sample.domain.entity;
 
 import org.springframework.stereotype.Component;
 
